@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  background-color: #0D47A1;
+  padding: 16px 40px;
+  position: sticky;
+  top: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo { color: white; font-weight: 700; font-size: 20px; }
+
+.nav-links { display: flex; gap: 24px; list-style: none; }
+.nav-links a { color: white; text-decoration: none; }
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.foto-profil {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;  /* Foto bulat */
+  object-fit: cover;
+  border: 4px solid #1565C0;
+}
+
+.jurusan { color: #1976D2; font-weight: 600; margin-bottom: 12px; }
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1565C0;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 16px;
+  margin-right: 8px;
+  transition: background-color 0.3s;
+}
+.btn:hover { background-color: #0D47A1; }
+
+#hobi {
+  text-align: center;
+}
+
+.grid-hobi {
+  display: flex;
+  justify-content: center;   /* posisi ke tengah */
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.kartu-hobi {
+  background-color: #1565C0;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #0D47A1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+#kontak {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.kontak-box {
+  background-color: #1565C0;
+  display: inline-block;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.kontak-box p {
+  margin: 10px 0;
+  font-size: 18px;
+  color:white
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
+  .nav-links { display: none; }
+}
