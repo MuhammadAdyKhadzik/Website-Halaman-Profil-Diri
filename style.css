@@ -8,6 +8,23 @@ body {
   font-family: 'Inter', sans-serif;
   color: #333;
   line-height: 1.6;
+  transition:0.3s;
+}
+
+body.dark{
+  background:#121212;
+  color:white;
+}
+
+body.dark .header,
+body.dark .footer{
+  background:#000;
+}
+
+body.dark .kartu-hobi,
+body.dark .kontak-box,
+body.dark .form-box{
+  background:#191970;
 }
 
 /* HEADER */
@@ -85,6 +102,29 @@ body {
   font-weight: bold;
 }
 
+.form-box{
+  max-width:400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  background:#f2f2f2;
+  padding:25px;
+  border-radius:12px;
+  margin-top: 100px;
+}
+
+.form-box input,
+.form-box textarea{
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+#msg{
+  font-weight:bold;
+}
+
 .footer {
   background-color: #0D47A1;
   color: white;
@@ -102,12 +142,12 @@ body {
   background-color: #1565C0;
   display: inline-block;
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 22px;
   margin-top: 20px;
 }
 
 .kontak-box p {
-  margin: 10px 0;
+  margin: 10px 5;
   font-size: 18px;
   color:white
 }
