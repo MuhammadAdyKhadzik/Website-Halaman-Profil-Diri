@@ -16,21 +16,22 @@
         <li><a href="#hobi">Hobi</a></li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
+      <button id="modeBtn" class="mode-btn">🌙 Dark Mode</button>
     </nav>
   </header>
-
+  
   <main>
     <section id="tentang" class="hero">
       <img src="FOTO.jpeg" alt="Foto Profil" class="foto-profil">
       <div class="info">
-        <h1>Muhammad Ady Khadzik</h1>
+        <h1 id="typingText"></h1>
         <p class="jurusan">Teknologi Informasi </p>
         <p>Halo, saya Muhammad Ady Khadzik, mahasiswa UIN Walisongo Semarang angkatan tahun 2025. Saya adalah pribadi yang suka belajar hal-hal baru, menambah pengalaman, dan terus mengembangkan diri. Saya senang mencoba tantangan baru serta bekerja sama dengan orang lain untuk mencapai tujuan bersama.
 Di waktu luang, saya suka mendengarkan musik, mencari informasi, bermain basket karena olahraga ini membuat saya lebih semangat dan sehat. Impian saya adalah menjadi pribadi yang sukses, memiliki karier yang baik, serta dapat memberikan manfaat bagi banyak orang.</p>
         <div class="sosmed">
           <a href="https://www.instagram.com/adhyi_khdzk?igsh=anVvNnk4ZWIyb2cz" class="btn">Instagram</a>
           <a href="#" class="btn">LinkedIn</a>
-          <a href="#" class="btn">GitHub</a>
+          <a href="https://github.com/MuhammadAdyKhadzik" class="btn">GitHub</a>
         </div>
       </div>
     </section>
@@ -52,12 +53,22 @@ Di waktu luang, saya suka mendengarkan musik, mencari informasi, bermain basket 
            <p> WhatsApp: 08123456789</p>
            <p> Semarang, Indonesia</p>
         </div>
+
+      <form id="contactForm" class="form-box">
+        <input type="text" id="nama" placeholder="Nama">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="pesan" placeholder="Pesan"></textarea>
+
+        <button type="submit" class="btn">Kirim</button>
+        <p id="msg"></p>
+      </form>
     </section>
 
 
   <footer class="footer">
     <p>Dibuat dengan HTML & CSS oleh Muhammad Ady Khadzik &copy; 2026</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
 
