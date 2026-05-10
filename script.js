@@ -1,63 +1,123 @@
-/* DARK MODE */
-const modeBtn = document.getElementById("modeBtn");
-
-if(localStorage.getItem("theme") === "dark"){
-  document.body.classList.add("dark");
-  modeBtn.innerText = "☀️ Light Mode";
-}
-
-modeBtn.addEventListener("click", function(){
-  document.body.classList.toggle("dark");
-
-  if(document.body.classList.contains("dark")){
-    modeBtn.innerText = "☀️ Light Mode";
-    localStorage.setItem("theme","dark");
-  }else{
-    modeBtn.innerText = "🌙 Dark Mode";
-    localStorage.setItem("theme","light");
-  }
-});
+/* script.js */
 
 
-/* TYPING TEXT */
+/* TYPING EFFECT */
+
 const text = "Muhammad Ady Khadzik";
-let i = 0;
+const typing = document.getElementById("typing");
+
+let index = 0;
 
 function ketik(){
-  if(i < text.length){
-    document.getElementById("typingText").innerHTML += text.charAt(i);
-    i++;
+
+  if(index < text.length){
+
+    typing.innerHTML += text.charAt(index);
+
+    index++;
+
     setTimeout(ketik,100);
   }
+
 }
 
 ketik();
 
 
-/* FORM VALIDASI */
-const form = document.getElementById("contactForm");
+/* DARK MODE */
+
+const themeBtn = document.getElementById("themeBtn");
+
+/* CEK THEME TERSIMPAN */
+
+if(localStorage.getItem("theme") === "dark"){
+
+  document.body.classList.add("dark");
+
+  themeBtn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+
+}
+
+/* TOGGLE THEME */
+
+themeBtn.addEventListener("click", ()=>{
+
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")){
+
+    localStorage.setItem("theme","dark");
+
+    themeBtn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+
+  }else{
+
+    localStorage.setItem("theme","light");
+
+    themeBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+
+  }
+
+});
+
+
+/* FORM VALIDATION */
+
+const form = document.getElementById("form");
 const msg = document.getElementById("msg");
 
-form.addEventListener("submit", function(e){
+form.addEventListener("submit",(e)=>{
+
   e.preventDefault();
 
-  let nama = document.getElementById("nama").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let pesan = document.getElementById("pesan").value.trim();
+  const nama = document.getElementById("nama").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const pesan = document.getElementById("pesan").value.trim();
 
   if(nama === "" || email === "" || pesan === ""){
+
     msg.style.color = "red";
     msg.innerText = "Semua field wajib diisi!";
     return;
   }
 
   if(!email.includes("@")){
+
     msg.style.color = "red";
-    msg.innerText = "Format email tidak valid!";
+    msg.innerText = "Email tidak valid!";
     return;
   }
 
-  msg.style.color = "green";
-  msg.innerText = "Pesan berhasil dikirim!";
+  msg.style.color = "limegreen";
+  msg.innerText = "Pesan berhasil dikirim 🚀";
+
   form.reset();
+
 });
+
+
+/* SCROLL ANIMATION */
+
+const scrollElements = document.querySelectorAll(".scroll");
+
+function showScroll(){
+
+  scrollElements.forEach((el)=>{
+
+    const triggerBottom = window.innerHeight * 0.85;
+
+    const top = el.getBoundingClientRect().top;
+
+    if(top < triggerBottom){
+
+      el.classList.add("active");
+
+    }
+
+  });
+
+}
+
+window.addEventListener("scroll",showScroll);
+
+showScroll();
