@@ -1,74 +1,214 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Profil Saya</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ICON -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <header class="header">
-    <nav class="nav">
-      <span class="logo">Profil Saya</span>
+
+    <nav class="navbar container">
+
+      <h2 class="logo">Profil Saya</h2>
+
       <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#tentang">Tentang</a></li>
         <li><a href="#hobi">Hobi</a></li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
-      <button id="modeBtn" class="mode-btn">🌙 Dark Mode</button>
+
+      <button id="themeBtn" class="theme-btn">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
     </nav>
+
   </header>
-  
-  <main>
-    <section id="tentang" class="hero">
-      <img src="FOTO.jpeg" alt="Foto Profil" class="foto-profil">
-      <div class="info">
-        <h1 id="typingText"></h1>
-        <p class="jurusan">Teknologi Informasi </p>
-        <p>Halo, saya Muhammad Ady Khadzik, mahasiswa UIN Walisongo Semarang angkatan tahun 2025. Saya adalah pribadi yang suka belajar hal-hal baru, menambah pengalaman, dan terus mengembangkan diri. Saya senang mencoba tantangan baru serta bekerja sama dengan orang lain untuk mencapai tujuan bersama.
-Di waktu luang, saya suka mendengarkan musik, mencari informasi, bermain basket karena olahraga ini membuat saya lebih semangat dan sehat. Impian saya adalah menjadi pribadi yang sukses, memiliki karier yang baik, serta dapat memberikan manfaat bagi banyak orang.</p>
-        <div class="sosmed">
-          <a href="https://www.instagram.com/adhyi_khdzk?igsh=anVvNnk4ZWIyb2cz" class="btn">Instagram</a>
-          <a href="#" class="btn">LinkedIn</a>
-          <a href="https://github.com/MuhammadAdyKhadzik" class="btn">GitHub</a>
-        </div>
-      </div>
-    </section>
 
-    <section id="hobi" class="section">
+
+  <!-- HERO -->
+  <section class="hero container" id="home">
+
+    <div class="hero-text scroll">
+
+      <span class="tag">
+        👋 Halo Semua! Saya
+      </span>
+
+      <h1 id="typing"></h1>
+
+      <h3>Mahasiswa Teknologi Informasi</h3>
+
+      <p>
+        Saya suka belajar hal baru, mengembangkan skill,
+        dan mengeksplor dunia teknologi modern.
+      </p>
+
+      <a href="#kontak" class="btn">
+        Hubungi Saya
+      </a>
+
+      <div class="social">
+
+        <a href="https://www.instagram.com/adhyi_khdzk?igsh=anVvNnk4ZWIyb2cz">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://github.com/MuhammadAdyKhadzik">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-image scroll">
+
+      <div class="image-box">
+        <img src="FOTO.jpeg" alt="Foto Profil">
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TENTANG -->
+  <section class="section container" id="tentang">
+
+    <div class="title scroll">
+      <h2>Tentang Saya</h2>
+      <span></span>
+    </div>
+
+    <div class="about-card scroll">
+
+      <p>
+        Saya merupakan mahasiswa yang memiliki minat
+        di bidang teknologi, desain web, dan pengembangan diri.
+        Saya percaya bahwa konsistensi dan semangat belajar
+        adalah kunci untuk berkembang menjadi lebih baik.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOBI -->
+  <section class="section container" id="hobi">
+
+    <div class="title scroll">
       <h2>Hobi Saya</h2>
-      <div class="grid-hobi">
-        <div class="kartu-hobi">Mendengarkan Musik</div>
-        <div class="kartu-hobi">Bermain BasketBall</div>
-        <div class="kartu-hobi">Mengetik</div>
+      <span></span>
+    </div>
+
+    <div class="hobi-grid">
+
+      <div class="hobi-card scroll">
+        <i class="fa-solid fa-music"></i>
+        <h3>Musik</h3>
+        <p>Suka mendengarkan musik saat santai.</p>
       </div>
-    </section>
-  </main>
 
-    <section id="kontak" class="section">
-       <h2>Kontak Saya</h2>
+      <div class="hobi-card scroll">
+        <i class="fa-solid fa-basketball"></i>
+        <h3>Basket</h3>
+        <p>Olahraga favorit agar tetap sehat.</p>
+      </div>
 
-         <div class="kontak-box">
-           <p> WhatsApp: 08123456789</p>
-           <p> Semarang, Indonesia</p>
+      <div class="hobi-card scroll">
+        <i class="fa-solid fa-keyboard"></i>
+        <h3>Mengetik</h3>
+        <p>Mengisi waktu luang untuk melepas penat.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- KONTAK -->
+  <section class="section container" id="kontak">
+
+    <div class="title scroll">
+      <h2>Kontak</h2>
+      <span></span>
+    </div>
+
+    <div class="contact-box scroll">
+
+      <div class="contact-info">
+
+        <div class="info">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Semarang, Indonesia</p>
         </div>
 
-      <form id="contactForm" class="form-box">
-        <input type="text" id="nama" placeholder="Nama">
-        <input type="email" id="email" placeholder="Email">
-        <textarea id="pesan" placeholder="Pesan"></textarea>
+        <div class="info">
+          <i class="fa-solid fa-phone"></i>
+          <p>088226554266</p>
+        </div>
 
-        <button type="submit" class="btn">Kirim</button>
+      </div>
+
+
+      <form id="form">
+
+        <input type="text" placeholder="Nama" id="nama">
+
+        <input type="email" placeholder="Email" id="email">
+
+        <textarea placeholder="Pesan" id="pesan"></textarea>
+
+        <button type="submit" class="btn">
+          Kirim Pesan
+        </button>
+
         <p id="msg"></p>
+
       </form>
-    </section>
+
+    </div>
+
+  </section>
 
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>Dibuat dengan HTML & CSS oleh Muhammad Ady Khadzik &copy; 2026</p>
+
+    <p>
+      © 2026 Muhammad Ady Khadzik | Dibuat dengan HTML CSS & JavaScript
+    </p>
+
   </footer>
+
+
+  <!-- JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
-
